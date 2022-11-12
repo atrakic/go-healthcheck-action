@@ -1,0 +1,15 @@
+name: Integration Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Self test
+        id: selftest
+        uses: ./
+
+      - name: Check outputs
+        run: |
+          test "${{ steps.selftest.outputs.statusCode }}" == "200"

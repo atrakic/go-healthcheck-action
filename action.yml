@@ -1,0 +1,13 @@
+name: "Go Container Action Template"
+description: "Simple healthcheck with Go Container actions"
+author: "Admir Trakic"
+inputs:
+  url:
+    description: "A url to check"
+    default: "https://github.com"
+outputs:
+  statusCode:
+    description: "Http response code (rfc9110)"
+runs:
+  using: "docker"
+  image: "Dockerfile"
