@@ -8,6 +8,10 @@ import (
 	"strconv"
 )
 
+var (
+	url = os.Getenv("INPUT_URL")
+)
+
 func healthcheck(url string) (string, error) {
 	if url == "" {
 		return "", errors.New("Empty url")
@@ -22,7 +26,7 @@ func healthcheck(url string) (string, error) {
 }
 
 func main() {
-	r, e := healthcheck(os.Getenv("INPUT_URL"))
+	r, e := healthcheck(url)
 	if e != nil {
 		fmt.Println("healthcheck failed:", e)
 	} else {
