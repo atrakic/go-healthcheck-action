@@ -10,4 +10,4 @@ outputs:
     description: "Http response code (rfc9110)"
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: "src/Dockerfile"
