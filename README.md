@@ -2,6 +2,9 @@
 > A example with simple GitHub action that contains a minimal Go application to test URL response code.
 Uses [Container Action](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-a-docker-container-action). 
 
+[![Build](https://github.com/atrakic/go-healthcheck-action/actions/workflows/go.yml/badge.svg)](https://github.com/atrakic/go-healthcheck-action/actions/workflows/go.yml)
+[![Integration Test](https://github.com/atrakic/go-healthcheck-action/actions/workflows/integration.yml/badge.svg)](https://github.com/atrakic/go-healthcheck-action/actions/workflows/integration.yml)
+
 ## Usage
 
 ### Example workflow
