@@ -4,15 +4,18 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: ["1.19"]
     defaults:
       run:
         shell: bash
         working-directory: src
     steps:
-      - name: Set up Go 1.19
+      - name: Set up Go ${{ matrix.go-version }}
         uses: actions/setup-go@v1
         with:
-          go-version: 1.19
+          go-version: ${{ matrix.go-version }}
         id: go
 
       - uses: actions/checkout@v3
